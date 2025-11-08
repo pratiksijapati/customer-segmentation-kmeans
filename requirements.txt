@@ -1,0 +1,11 @@
+
+---
+
+## `requirements.txt`
+```text
+numpy
+pandas
+scikit-learn
+matplotlib
+streamlit
+joblib
