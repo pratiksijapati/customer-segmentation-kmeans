@@ -1,27 +1,24 @@
-# ML Combo Project — Supervised & Unsupervised (Ready-to-Run)
+# Customer Segmentation with K-Means
 
-Two small projects with training scripts and Streamlit apps.
+Groups shopping-mall customers into segments by **annual income** and **spending score** using K-Means clustering, with a small Streamlit app to explore the clusters and assign a new customer to one.
 
-## Projects
-1) **Supervised — Salary Prediction (Linear Regression)**
-   - Predict salary from years of experience.
-   - Files: `supervised/train.py`, `supervised/streamlit_app.py`.
-   - Data: `data/salary_data.csv` (auto-download if missing).
+> **Status:** small machine-learning exercise.
 
-2) **Unsupervised — Customer Segmentation (K-Means)**
-   - Cluster customers using `AnnualIncome` and `SpendingScore`.
-   - Files: `unsupervised/train.py`, `unsupervised/streamlit_app.py`.
-   - Data: `data/mall_customers_sample.csv` (auto-generate if missing).
+## What it does
 
-## Quick Start
+- `train.py` scales the two features with `StandardScaler`, fits K-Means (4 clusters) and saves the model with joblib. If `data/mall_customers_sample.csv` is missing, it generates a synthetic sample dataset.
+- `streamlit_app.py` trains the model on first run if needed, plots the clusters and predicts the segment for a customer you enter.
+
+## Tech stack
+
+Python · scikit-learn · pandas · NumPy · Matplotlib · Streamlit · joblib
+
+## Run locally
+
 ```bash
-python -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
+python -m venv .venv
+.venv\Scripts\activate          # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
-
-# Train
-python supervised/train.py
-python unsupervised/train.py
-
-# Run the apps (use separate terminals or run one-by-one)
-streamlit run supervised/streamlit_app.py
-streamlit run unsupervised/streamlit_app.py
+python train.py
+streamlit run streamlit_app.py
+```

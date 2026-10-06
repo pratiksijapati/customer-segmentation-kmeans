@@ -13,7 +13,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
 HERE = os.path.dirname(__file__)
-DATA_PATH = os.path.join(HERE, "..", "data", "mall_customers_sample.csv")
+DATA_PATH = os.path.join(HERE, "data", "mall_customers_sample.csv")
 MODEL_PATH = os.path.join(HERE, "kmeans.joblib")
 SCALER_PATH = os.path.join(HERE, "scaler.joblib")
 

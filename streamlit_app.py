@@ -10,7 +10,7 @@ import subprocess
 HERE = os.path.dirname(__file__)
 MODEL_PATH = os.path.join(HERE, "kmeans.joblib")
 SCALER_PATH = os.path.join(HERE, "scaler.joblib")
-DATA_PATH = os.path.join(HERE, "..", "data", "mall_customers_sample.csv")
+DATA_PATH = os.path.join(HERE, "data", "mall_customers_sample.csv")
 TRAIN_SCRIPT = os.path.join(HERE, "train.py")
 
 st.set_page_config(page_title="Customer Segmentation (K-Means)", layout="centered")
